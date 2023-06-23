@@ -81,7 +81,9 @@ import {
     async (email) => {
       const {
         data: { movies },
-      } = await axios.get(`http://localhost:5000/api/user/liked/${email}`);
+      // } = await axios.get(`http://localhost:5000/api/user/liked/${email}`);
+            } = await axios.get(`https://imdbclone-wosd.onrender.com/api/user/liked/${email}`);
+          
       return movies;
     }
   );
@@ -91,7 +93,9 @@ import {
     async ({ movieId, email }) => {
       const {
         data: { movies },
-      } = await axios.put("http://localhost:5000/api/user/remove", {
+      // } = await axios.put("http://localhost:5000/api/user/remove", {
+           } = await axios.put(" https://imdbclone-wosd.onrender.com/api/user/remove", {
+         
         email,
         movieId,
       });
